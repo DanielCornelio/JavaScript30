@@ -10,10 +10,10 @@
 
 //Build out functions
 function togglePlay(){
-    if(video.paused){
-        video.play();
-    }else{
-        video.pause();
-    }
+    const method = video.paused ? 'play' : 'pause';
+    video[method]();
+    //
 }
-// Hook uo the envent listernet
+// Hook uo the envent listerners
+video.addEventListener('click', togglePlay);
+toggle.addEventListener('click', togglePlay);
